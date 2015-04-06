@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1817A9A31ACC43B800943DB7 /* PXPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9A21ACC43B800943DB7 /* PXPhoto.swift */; };
+		1817A9A71ACC46DD00943DB7 /* PXPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9A61ACC46DD00943DB7 /* PXPhotoManager.swift */; };
+		1817A9A91ACC474D00943DB7 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9A81ACC474D00943DB7 /* Secret.swift */; };
+		1817A9AB1ACC544200943DB7 /* PXPhotoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9AA1ACC544200943DB7 /* PXPhotoListTableViewController.swift */; };
+		1817A9AD1ACC549400943DB7 /* PXPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9AC1ACC549400943DB7 /* PXPhotoTableViewCell.swift */; };
+		1817A9AF1ACCE73400943DB7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1817A9AE1ACCE73400943DB7 /* ImageLoader.swift */; };
+		183119B21AC9490200AC1B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B11AC9490200AC1B14 /* AppDelegate.swift */; };
+		183119B41AC9490200AC1B14 /* PXPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B31AC9490200AC1B14 /* PXPhotoViewController.swift */; };
+		183119B61AC9490200AC1B14 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B51AC9490200AC1B14 /* SecondViewController.swift */; };
+		183119B91AC9490200AC1B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183119B71AC9490200AC1B14 /* Main.storyboard */; };
+		183119BB1AC9490200AC1B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183119BA1AC9490200AC1B14 /* Images.xcassets */; };
+		183119BE1AC9490200AC1B14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183119BC1AC9490200AC1B14 /* LaunchScreen.xib */; };
+		183119CA1AC9490200AC1B14 /* blekmesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119C91AC9490200AC1B14 /* blekmesTests.swift */; };
+		187354AD1AD25C05008416B0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354AC1AD25C05008416B0 /* SignInViewController.swift */; };
+		187354AF1AD2608B008416B0 /* PresentStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */; };
+		187354B21AD261D9008416B0 /* AWSConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B11AD261D9008416B0 /* AWSConnection.swift */; };
+		187354B41AD263E4008416B0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B31AD263E4008416B0 /* Session.swift */; };
+		187354B81AD2D075008416B0 /* TapToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B71AD2D075008416B0 /* TapToClose.swift */; };
+		2BC2F885258D264489CAE737 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F4779D7808639C367F158 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		183119C41AC9490200AC1B14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183119A41AC9490200AC1B14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 183119AB1AC9490200AC1B14;
+			remoteInfo = blekmes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1817A9A21ACC43B800943DB7 /* PXPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXPhoto.swift; sourceTree = "<group>"; };
+		1817A9A61ACC46DD00943DB7 /* PXPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXPhotoManager.swift; sourceTree = "<group>"; };
+		1817A9A81ACC474D00943DB7 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		1817A9AA1ACC544200943DB7 /* PXPhotoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXPhotoListTableViewController.swift; sourceTree = "<group>"; };
+		1817A9AC1ACC549400943DB7 /* PXPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		1817A9AE1ACCE73400943DB7 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		183119AC1AC9490200AC1B14 /* blekmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blekmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183119B01AC9490200AC1B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183119B11AC9490200AC1B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		183119B31AC9490200AC1B14 /* PXPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXPhotoViewController.swift; sourceTree = "<group>"; };
+		183119B51AC9490200AC1B14 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		183119B81AC9490200AC1B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		183119BA1AC9490200AC1B14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		183119BD1AC9490200AC1B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		183119C31AC9490200AC1B14 /* blekmesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blekmesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183119C81AC9490200AC1B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183119C91AC9490200AC1B14 /* blekmesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blekmesTests.swift; sourceTree = "<group>"; };
+		18607BE31ACDB293004A7174 /* ObjectiveCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCBridgingHeader.h; sourceTree = "<group>"; };
+		187354AC1AD25C05008416B0 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentStoryBoard.swift; path = ../PresentStoryBoard.swift; sourceTree = "<group>"; };
+		187354B11AD261D9008416B0 /* AWSConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConnection.swift; sourceTree = "<group>"; };
+		187354B31AD263E4008416B0 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		187354B71AD2D075008416B0 /* TapToClose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapToClose.swift; sourceTree = "<group>"; };
+		97268E3E74DB3537395D1A6A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A00F4779D7808639C367F158 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C34023ED57864BA202C41DD5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		183119A91AC9490200AC1B14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC2F885258D264489CAE737 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183119C01AC9490200AC1B14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11E91ADFDDE075DBF26840A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00F4779D7808639C367F158 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		148011FA7E9C5C2E6657CE71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C34023ED57864BA202C41DD5 /* Pods.debug.xcconfig */,
+				97268E3E74DB3537395D1A6A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1817A9A51ACC43D700943DB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1817A9A21ACC43B800943DB7 /* PXPhoto.swift */,
+				1817A9A61ACC46DD00943DB7 /* PXPhotoManager.swift */,
+				1817A9A81ACC474D00943DB7 /* Secret.swift */,
+				187354B31AD263E4008416B0 /* Session.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1817A9B01ACCE73C00943DB7 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				1817A9AE1ACCE73400943DB7 /* ImageLoader.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		183119A31AC9490200AC1B14 = {
+			isa = PBXGroup;
+			children = (
+				183119AE1AC9490200AC1B14 /* blekmes */,
+				183119C61AC9490200AC1B14 /* blekmesTests */,
+				183119AD1AC9490200AC1B14 /* Products */,
+				148011FA7E9C5C2E6657CE71 /* Pods */,
+				11E91ADFDDE075DBF26840A0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		183119AD1AC9490200AC1B14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				183119AC1AC9490200AC1B14 /* blekmes.app */,
+				183119C31AC9490200AC1B14 /* blekmesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183119AE1AC9490200AC1B14 /* blekmes */ = {
+			isa = PBXGroup;
+			children = (
+				1817A9A51ACC43D700943DB7 /* Model */,
+				187354B51AD27395008416B0 /* Controller */,
+				187354B01AD26098008416B0 /* Util */,
+				187354B61AD273A6008416B0 /* InterfaceBuilder */,
+				183119AF1AC9490200AC1B14 /* Supporting Files */,
+				1817A9B01ACCE73C00943DB7 /* Lib */,
+			);
+			path = blekmes;
+			sourceTree = "<group>";
+		};
+		183119AF1AC9490200AC1B14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18607BE31ACDB293004A7174 /* ObjectiveCBridgingHeader.h */,
+				183119BA1AC9490200AC1B14 /* Images.xcassets */,
+				183119B11AC9490200AC1B14 /* AppDelegate.swift */,
+				183119B01AC9490200AC1B14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		183119C61AC9490200AC1B14 /* blekmesTests */ = {
+			isa = PBXGroup;
+			children = (
+				183119C91AC9490200AC1B14 /* blekmesTests.swift */,
+				183119C71AC9490200AC1B14 /* Supporting Files */,
+			);
+			path = blekmesTests;
+			sourceTree = "<group>";
+		};
+		183119C71AC9490200AC1B14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				183119C81AC9490200AC1B14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187354B01AD26098008416B0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */,
+				187354B11AD261D9008416B0 /* AWSConnection.swift */,
+				187354B71AD2D075008416B0 /* TapToClose.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		187354B51AD27395008416B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				183119B31AC9490200AC1B14 /* PXPhotoViewController.swift */,
+				1817A9AA1ACC544200943DB7 /* PXPhotoListTableViewController.swift */,
+				1817A9AC1ACC549400943DB7 /* PXPhotoTableViewCell.swift */,
+				187354AC1AD25C05008416B0 /* SignInViewController.swift */,
+				183119B51AC9490200AC1B14 /* SecondViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		187354B61AD273A6008416B0 /* InterfaceBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				183119BC1AC9490200AC1B14 /* LaunchScreen.xib */,
+				183119B71AC9490200AC1B14 /* Main.storyboard */,
+			);
+			name = InterfaceBuilder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		183119AB1AC9490200AC1B14 /* blekmes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183119CD1AC9490200AC1B14 /* Build configuration list for PBXNativeTarget "blekmes" */;
+			buildPhases = (
+				B52C8F602A29E8541545FF08 /* Check Pods Manifest.lock */,
+				183119A81AC9490200AC1B14 /* Sources */,
+				183119A91AC9490200AC1B14 /* Frameworks */,
+				183119AA1AC9490200AC1B14 /* Resources */,
+				DB9E290CDFCB392FCE5B3537 /* Embed Pods Frameworks */,
+				F5B3BBBF3309E74D80A0397A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blekmes;
+			productName = blekmes;
+			productReference = 183119AC1AC9490200AC1B14 /* blekmes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		183119C21AC9490200AC1B14 /* blekmesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183119D01AC9490200AC1B14 /* Build configuration list for PBXNativeTarget "blekmesTests" */;
+			buildPhases = (
+				183119BF1AC9490200AC1B14 /* Sources */,
+				183119C01AC9490200AC1B14 /* Frameworks */,
+				183119C11AC9490200AC1B14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				183119C51AC9490200AC1B14 /* PBXTargetDependency */,
+			);
+			name = blekmesTests;
+			productName = blekmesTests;
+			productReference = 183119C31AC9490200AC1B14 /* blekmesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		183119A41AC9490200AC1B14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = blekey;
+				TargetAttributes = {
+					183119AB1AC9490200AC1B14 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					183119C21AC9490200AC1B14 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 183119AB1AC9490200AC1B14;
+					};
+				};
+			};
+			buildConfigurationList = 183119A71AC9490200AC1B14 /* Build configuration list for PBXProject "blekmes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 183119A31AC9490200AC1B14;
+			productRefGroup = 183119AD1AC9490200AC1B14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				183119AB1AC9490200AC1B14 /* blekmes */,
+				183119C21AC9490200AC1B14 /* blekmesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		183119AA1AC9490200AC1B14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183119B91AC9490200AC1B14 /* Main.storyboard in Resources */,
+				183119BE1AC9490200AC1B14 /* LaunchScreen.xib in Resources */,
+				183119BB1AC9490200AC1B14 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183119C11AC9490200AC1B14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B52C8F602A29E8541545FF08 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB9E290CDFCB392FCE5B3537 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5B3BBBF3309E74D80A0397A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		183119A81AC9490200AC1B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183119B61AC9490200AC1B14 /* SecondViewController.swift in Sources */,
+				187354B81AD2D075008416B0 /* TapToClose.swift in Sources */,
+				1817A9A91ACC474D00943DB7 /* Secret.swift in Sources */,
+				1817A9AD1ACC549400943DB7 /* PXPhotoTableViewCell.swift in Sources */,
+				183119B21AC9490200AC1B14 /* AppDelegate.swift in Sources */,
+				1817A9AB1ACC544200943DB7 /* PXPhotoListTableViewController.swift in Sources */,
+				1817A9AF1ACCE73400943DB7 /* ImageLoader.swift in Sources */,
+				187354AF1AD2608B008416B0 /* PresentStoryBoard.swift in Sources */,
+				187354B41AD263E4008416B0 /* Session.swift in Sources */,
+				1817A9A31ACC43B800943DB7 /* PXPhoto.swift in Sources */,
+				183119B41AC9490200AC1B14 /* PXPhotoViewController.swift in Sources */,
+				187354B21AD261D9008416B0 /* AWSConnection.swift in Sources */,
+				187354AD1AD25C05008416B0 /* SignInViewController.swift in Sources */,
+				1817A9A71ACC46DD00943DB7 /* PXPhotoManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183119BF1AC9490200AC1B14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183119CA1AC9490200AC1B14 /* blekmesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		183119C51AC9490200AC1B14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 183119AB1AC9490200AC1B14 /* blekmes */;
+			targetProxy = 183119C41AC9490200AC1B14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		183119B71AC9490200AC1B14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183119B81AC9490200AC1B14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		183119BC1AC9490200AC1B14 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183119BD1AC9490200AC1B14 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		183119CB1AC9490200AC1B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		183119CC1AC9490200AC1B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		183119CE1AC9490200AC1B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C34023ED57864BA202C41DD5 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = blekmes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = blekmes/ObjectiveCBridgingHeader.h;
+			};
+			name = Debug;
+		};
+		183119CF1AC9490200AC1B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97268E3E74DB3537395D1A6A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = blekmes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = blekmes/ObjectiveCBridgingHeader.h;
+			};
+			name = Release;
+		};
+		183119D11AC9490200AC1B14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = blekmesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blekmes.app/blekmes";
+			};
+			name = Debug;
+		};
+		183119D21AC9490200AC1B14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = blekmesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blekmes.app/blekmes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		183119A71AC9490200AC1B14 /* Build configuration list for PBXProject "blekmes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183119CB1AC9490200AC1B14 /* Debug */,
+				183119CC1AC9490200AC1B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183119CD1AC9490200AC1B14 /* Build configuration list for PBXNativeTarget "blekmes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183119CE1AC9490200AC1B14 /* Debug */,
+				183119CF1AC9490200AC1B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183119D01AC9490200AC1B14 /* Build configuration list for PBXNativeTarget "blekmesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183119D11AC9490200AC1B14 /* Debug */,
+				183119D21AC9490200AC1B14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 183119A41AC9490200AC1B14 /* Project object */;
+}
