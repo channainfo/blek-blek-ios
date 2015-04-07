@@ -8,32 +8,16 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: BaseViewController {
 
   @IBOutlet weak var loginTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
 
   @IBOutlet weak var signInButton: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //TapToClose(viewController: self)
-
-//        self.signInButton.backgroundColor = UIColor.clearColor()
-//        self.signInButton.layer.cornerRadius = 5
-//        self.signInButton.layer.borderWidth = 1
-//        self.signInButton.layer.borderColor = UIColor.grayColor().CGColor
-    
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-   func closeKeyboard(){
-      self.view.endEditing(true)
-   }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 
   @IBAction func credentialDoneEditing(sender: AnyObject) {
     println("Done")

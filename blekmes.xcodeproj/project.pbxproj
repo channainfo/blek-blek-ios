@@ -24,7 +24,7 @@
 		187354AF1AD2608B008416B0 /* PresentStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */; };
 		187354B21AD261D9008416B0 /* AWSConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B11AD261D9008416B0 /* AWSConnection.swift */; };
 		187354B41AD263E4008416B0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B31AD263E4008416B0 /* Session.swift */; };
-		187354B81AD2D075008416B0 /* TapToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B71AD2D075008416B0 /* TapToClose.swift */; };
+		187354BA1AD3A54B008416B0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187354B91AD3A54B008416B0 /* BaseViewController.swift */; };
 		2BC2F885258D264489CAE737 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F4779D7808639C367F158 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 		187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentStoryBoard.swift; path = ../PresentStoryBoard.swift; sourceTree = "<group>"; };
 		187354B11AD261D9008416B0 /* AWSConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConnection.swift; sourceTree = "<group>"; };
 		187354B31AD263E4008416B0 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		187354B71AD2D075008416B0 /* TapToClose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapToClose.swift; sourceTree = "<group>"; };
+		187354B91AD3A54B008416B0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		97268E3E74DB3537395D1A6A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A00F4779D7808639C367F158 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34023ED57864BA202C41DD5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,7 +188,6 @@
 			children = (
 				187354AE1AD2608B008416B0 /* PresentStoryBoard.swift */,
 				187354B11AD261D9008416B0 /* AWSConnection.swift */,
-				187354B71AD2D075008416B0 /* TapToClose.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -201,6 +200,7 @@
 				1817A9AC1ACC549400943DB7 /* PXPhotoTableViewCell.swift */,
 				187354AC1AD25C05008416B0 /* SignInViewController.swift */,
 				183119B51AC9490200AC1B14 /* SecondViewController.swift */,
+				187354B91AD3A54B008416B0 /* BaseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -366,10 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				183119B61AC9490200AC1B14 /* SecondViewController.swift in Sources */,
-				187354B81AD2D075008416B0 /* TapToClose.swift in Sources */,
 				1817A9A91ACC474D00943DB7 /* Secret.swift in Sources */,
 				1817A9AD1ACC549400943DB7 /* PXPhotoTableViewCell.swift in Sources */,
 				183119B21AC9490200AC1B14 /* AppDelegate.swift in Sources */,
+				187354BA1AD3A54B008416B0 /* BaseViewController.swift in Sources */,
 				1817A9AB1ACC544200943DB7 /* PXPhotoListTableViewController.swift in Sources */,
 				1817A9AF1ACCE73400943DB7 /* ImageLoader.swift in Sources */,
 				187354AF1AD2608B008416B0 /* PresentStoryBoard.swift in Sources */,
