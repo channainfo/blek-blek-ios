@@ -30,9 +30,20 @@ class SignInViewController: BaseViewController {
     var login = self.loginTextField.text
     var password = self.passwordTextField.text
     var session = Session(login: login, password: password)
-    session.auth()
+    session.auth({ (jsonData) -> Void in
+       println("Signin success with: \(jsonData)")
+       let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main_view_controller") as UITabBarController
+       let DEFAULT_VIEW_CONTROLLER_INDEX = 2
+       mainViewController.selectedIndex = DEFAULT_VIEW_CONTROLLER_INDEX
+       self.presentViewController(mainViewController, animated: true, completion: nil)
+       // self.redirectTo("main_view_controller")
+
+    }, onError: { (statusCode) -> Void in
+      println("Failed with code: \(statusCode)")
+    })
 
   }
+
 
     /*
     // MARK: - Navigation

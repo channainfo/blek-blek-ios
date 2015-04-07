@@ -19,20 +19,19 @@ class Session {
     self.password = password
   }
 
-  func auth()-> Void {
+  func auth(onSuccess: (data: AnyObject)->Void, onError: (statusCode: Int)->Void )-> Void {
     let parameters = [ "username": self.login, "password": self.password,
                        "grant_type": "password", "client_id": Secret.API_CLIENT_ID,
                        "client_secret": Secret.API_CLIENT_SECRET  ]
 
     Alamofire.request(.POST, "\(Secret.API_HOST)/oauth/token", parameters: parameters, encoding: ParameterEncoding.URL)
              .responseJSON { (request, response, json, error) -> Void in
-              let jsonData = JSON(json!)
 
               if response?.statusCode != 200 {
-                println("Session could not be created, produced error with code: \(response?.statusCode)")
+                onError(statusCode: response!.statusCode)
               }
               else {
-                println("jsonData:\(jsonData)")
+                onSuccess(data: json!)
               }
 
     }

@@ -29,5 +29,10 @@ class BaseViewController: UIViewController {
       self.view.endEditing(true)
     }
 
+    func redirectTo(storyboardId: String) -> Void {
+      let viewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardId) as? UIViewController
+      self.presentViewController(viewController!, animated: true, completion: nil)
+    }
+
 
 }
