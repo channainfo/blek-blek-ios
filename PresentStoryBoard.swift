@@ -12,7 +12,7 @@ struct PresentStoryBoard {
   static func setRootViewController(viewControllerId: String, appDelegate: AppDelegate) -> Void {
 
     var uiStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    var initialViewController = uiStoryBoard.instantiateViewControllerWithIdentifier(viewControllerId) as? SignInViewController
+    var initialViewController = uiStoryBoard.instantiateViewControllerWithIdentifier(viewControllerId) as? UIViewController
     // var navigationController = UINavigationController(rootViewController: initialViewController!)
 
     appDelegate.window = UIWindow(frame: UIScreen.mainScreen().bounds)

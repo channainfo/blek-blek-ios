@@ -22,4 +22,6 @@ struct Secret {
   static var AWS_DEFAULT_SERVICE_REGION_TYPE = AWSRegionType.USEast1
   static var AWS_COGNITO_IDENTITY_POOL_ID = "us-east-1:9a999ffb-5392-4978-9a03-89ec116c7422"
   static var AWS_S3_BUCKET_NAME = "blekmes-dev"
+
+  static var APP_SESSION_ID = "user_session_name"
 }

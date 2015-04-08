@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //    AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
 
-    PresentStoryBoard.setRootViewController("sign_in_view_controller", appDelegate: self)
+    let viewControllerId = Session.authenticated() ? "main_view_controller" : "sign_in_view_controller"
+    PresentStoryBoard.setRootViewController(viewControllerId, appDelegate: self)
     AWSConnection()
 
     return true
