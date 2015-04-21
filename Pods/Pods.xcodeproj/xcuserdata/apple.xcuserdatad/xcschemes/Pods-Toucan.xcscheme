@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50AD8036B8DA57DDCAC53AA4"
+               BlueprintIdentifier = "652178D42BAC3B41C00046C8"
                BuildableName = "Toucan.framework"
                BlueprintName = "Pods-Toucan"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -125,31 +125,34 @@
                                             <blurEffect style="extraLight"/>
                                         </visualEffectView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFo-Mv-ids">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="278"/>
+                                            <rect key="frame" x="-48" y="98" width="39" height="54"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="spm-CB-18P">
-                                            <rect key="frame" x="285" y="124" width="30" height="30"/>
-                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Sc-aA-sFd">
+                                            <rect key="frame" x="290" y="130" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="46X-ge-ne6"/>
+                                            </constraints>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="6Sc-aA-sFd" secondAttribute="centerX" id="0fG-iy-llc"/>
+                                        <constraint firstAttribute="centerY" secondItem="6Sc-aA-sFd" secondAttribute="centerY" id="77V-4d-bf4"/>
                                         <constraint firstAttribute="trailing" secondItem="E2L-ai-9PE" secondAttribute="trailing" id="9uI-4B-GGw"/>
                                         <constraint firstItem="m4L-cB-bMJ" firstAttribute="top" secondItem="Jhw-BT-aLh" secondAttribute="topMargin" constant="-8" id="AMi-MP-AB3"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="m4L-cB-bMJ" secondAttribute="bottom" constant="-7" id="KpY-Me-gt3"/>
-                                        <constraint firstAttribute="centerX" secondItem="spm-CB-18P" secondAttribute="centerX" id="a15-tK-dPe"/>
                                         <constraint firstItem="m4L-cB-bMJ" firstAttribute="leading" secondItem="Jhw-BT-aLh" secondAttribute="leadingMargin" constant="-8" id="d6E-us-4rl"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="m4L-cB-bMJ" secondAttribute="trailing" constant="-8" id="muB-Xr-EsR"/>
                                         <constraint firstItem="E2L-ai-9PE" firstAttribute="leading" secondItem="Jhw-BT-aLh" secondAttribute="leading" id="qf1-Af-K4a"/>
                                         <constraint firstAttribute="bottom" secondItem="E2L-ai-9PE" secondAttribute="bottom" id="reQ-d1-POU"/>
-                                        <constraint firstAttribute="centerY" secondItem="spm-CB-18P" secondAttribute="centerY" id="vaf-xC-1W1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="blurEffect" destination="E2L-ai-9PE" id="qew-vP-q43"/>
                                     <outlet property="camera" destination="OYy-AG-cwa" id="IyM-Xb-WN7"/>
                                     <outlet property="focalLens" destination="K8k-1H-eNf" id="CoE-x7-nPt"/>
-                                    <outlet property="imageLoading" destination="spm-CB-18P" id="w2O-g4-uSO"/>
                                     <outlet property="iso" destination="Cnw-FN-IxF" id="TY9-V8-1tX"/>
                                     <outlet property="lens" destination="KFK-l1-Bpt" id="OCW-pq-wqu"/>
+                                    <outlet property="photoActivityIndicator" destination="6Sc-aA-sFd" id="Bhh-uX-S8a"/>
                                     <outlet property="posterImageView" destination="m4L-cB-bMJ" id="esA-QF-dek"/>
                                     <outlet property="shutterSpeed" destination="LNw-nX-fRE" id="4nk-wV-g6A"/>
                                 </connections>
@@ -164,9 +167,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tG5-LX-pac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="790"/>
+            <point key="canvasLocation" x="-317" y="781"/>
         </scene>
-        <!--Item-->
+        <!--Updated-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="PXPhotoViewController" customModule="blekmes" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,12 +195,12 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icon-around-7" id="bpL-Fw-V3y"/>
+                    <tabBarItem key="tabBarItem" title="Updated" image="icon-around-7" id="bpL-Fw-V3y"/>
                     <navigationItem key="navigationItem" id="tIi-a8-uwT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="-136"/>
+            <point key="canvasLocation" x="725" y="-480"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="wg7-f3-ORb">
@@ -229,9 +232,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="360"/>
+            <point key="canvasLocation" x="1378" y="24"/>
         </scene>
-        <!--Item-->
+        <!--BLEKEY-->
         <scene sceneID="UBa-hZ-Ske">
             <objects>
                 <viewController id="vjK-vH-Zye" sceneMemberID="viewController">
@@ -244,11 +247,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icon-camera-7" id="cKu-Fc-RfW"/>
+                    <tabBarItem key="tabBarItem" title="BLEKEY" image="icon-camera-7" id="cKu-Fc-RfW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umz-zb-O61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="781"/>
+            <point key="canvasLocation" x="971" y="781"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="TL9-RW-Bbg">
@@ -421,12 +424,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9o-3x-sMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="1522"/>
+            <point key="canvasLocation" x="325" y="1576"/>
         </scene>
     </scenes>
     <resources>
         <image name="default-dark" width="300" height="168"/>
-        <image name="first" width="30" height="30"/>
         <image name="icon-around-7" width="30" height="30"/>
         <image name="icon-business-target-7" width="30" height="30"/>
         <image name="icon-camera-7" width="30" height="30"/>

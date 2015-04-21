@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2D64740A-C5F0-4C02-B3E2-7F67CF54253F</string>
+	<string>E1452CD7-C3CA-4DA3-AF30-3D58A63FBAF5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>blekmes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>github.com:channainfo/blek-blek-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>blekmes.xcworkspace</string>
+	<string>blekmes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>416A516C7D42D08892245B36543F180095032D07</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:channainfo/blek-blek-ios.git</string>

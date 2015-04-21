@@ -207,6 +207,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
             }
         } else {
             uploadRequest.state = AWSS3TransferManagerRequestStateCompleted;
+            [uploadRequest setValue:nil forKey:@"internalRequest"];
             return [BFTask taskWithResult:task.result];
         }
     }];
@@ -558,8 +559,9 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 
             [downloadOutput aws_copyPropertiesFromObject:getObjectOutput];
         }
-        [downloadRequest setValue:[NSNumber numberWithInteger:AWSS3TransferManagerRequestStateCompleted]
-                           forKey:@"state"];
+        
+        downloadRequest.state = AWSS3TransferManagerRequestStateCompleted;
+        [downloadRequest setValue:nil forKey:@"internalRequest"];
         return downloadOutput;
 
     }] continueWithBlock:^id(BFTask *task) {

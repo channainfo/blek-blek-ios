@@ -32,7 +32,7 @@ class SignInViewController: BaseViewController {
     var session = Session(login: login, password: password)
     session.auth({ (jsonData) -> Void in
        println("Signin success with: \(jsonData)")
-       let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main_view_controller") as UITabBarController
+       let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main_view_controller") as! UITabBarController
        let DEFAULT_VIEW_CONTROLLER_INDEX = 2
        mainViewController.selectedIndex = DEFAULT_VIEW_CONTROLLER_INDEX
        self.presentViewController(mainViewController, animated: true, completion: nil)

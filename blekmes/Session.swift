@@ -31,7 +31,7 @@ class Session {
   }
 
   class func authenticated() -> Bool {
-    var session = PersistentStorage.sharedInstance.get(Secret.APP_SESSION_ID)
+    var session: AnyObject? = PersistentStorage.sharedInstance.get(Secret.APP_SESSION_ID)
     return (session != nil) ? true : false
   }
 

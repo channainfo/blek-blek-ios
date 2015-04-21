@@ -41,7 +41,7 @@ public class SwiftSpinner: UIView {
         
         let titleScale: CGFloat = 0.85
         titleLabel.frame.size = CGSize(width: frameSize.width * titleScale, height: frameSize.height * titleScale)
-        titleLabel.font = UIFont(name: "HelveticaNeue", size: 22.0)
+        titleLabel.font = defaultTitleFont
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .Center
         titleLabel.lineBreakMode = .ByWordWrapping
@@ -90,11 +90,11 @@ public class SwiftSpinner: UIView {
     // Show the spinner activity on screen, if visible only update the title
     //
     public class func show(title: String, animated: Bool = true) {
-
-        let window = UIApplication.sharedApplication().windows.first as UIWindow
+        
+        let window = UIApplication.sharedApplication().windows.first as! UIWindow
         let spinner = SwiftSpinner.sharedInstance
         
-        spinner.frame = window.frame
+        spinner.updateFrame()
         
         if spinner.superview == nil {
             //show the spinner
@@ -108,16 +108,27 @@ public class SwiftSpinner: UIView {
         
         spinner.title = title
         spinner.animating = animated
-
     }
-
+    
+    //
+    // Show the spinner activity on screen with custom font, if visible only update the title
+    // Note that the custom font will be discarded when hiding the spinner
+    // To permanently change the title font, set the defaultTitleFont property
+    //
+    public class func show(title: String, withFont font: UIFont, animated: Bool = true) {
+        let spinner = SwiftSpinner.sharedInstance
+        spinner.titleLabel.font = font
+        
+        show(title, animated: true)
+    }
+    
     //
     // Hide the spinner
     //
     public class func hide() {
         let spinner = SwiftSpinner.sharedInstance
         
-        if  spinner.superview == nil {
+        if spinner.superview == nil {
             return
         }
         
@@ -126,9 +137,20 @@ public class SwiftSpinner: UIView {
             }, completion: {_ in
                 spinner.alpha = 1.0
                 spinner.removeFromSuperview()
+                spinner.titleLabel.font = spinner.defaultTitleFont
+                spinner.titleLabel.text = nil
         })
         
         spinner.animating = false
+    }
+    
+    //
+    // Set the default title font
+    //
+    public class func setDefaultTitleFont(font: UIFont?) {
+        let spinner = SwiftSpinner.sharedInstance
+        spinner.defaultTitleFont = font
+        spinner.titleLabel.font = font
     }
     
     //
@@ -196,7 +218,7 @@ public class SwiftSpinner: UIView {
             }
         }
     }
-
+    
     // MARK: - Private interface
     
     //
@@ -209,6 +231,7 @@ public class SwiftSpinner: UIView {
     private var vibrancyView: UIVisualEffectView!
     
     lazy var titleLabel = UILabel()
+    var defaultTitleFont = UIFont(name: "HelveticaNeue", size: 22.0)
     let frameSize = CGSize(width: 200.0, height: 200.0)
     
     private lazy var outerCircleView = UIView()
@@ -220,7 +243,7 @@ public class SwiftSpinner: UIView {
     required public init(coder aDecoder: NSCoder) {
         fatalError("Not coder compliant")
     }
-
+    
     private var currentOuterRotation: CGFloat = 0.0
     private var currentInnerRotation: CGFloat = 0.1
     
@@ -239,7 +262,7 @@ public class SwiftSpinner: UIView {
             self.outerCircleView.transform = CGAffineTransformMakeRotation(self.currentOuterRotation)
             }, completion: {_ in
                 let waitDuration = Double(Float(arc4random()) /  Float(UInt32.max)) * 1.0 + 1.0
-                self.delay(seconds: waitDuration, {
+                self.delay(seconds: waitDuration, completion: {
                     if self.animating {
                         self.spinOuter()
                     }
@@ -257,12 +280,17 @@ public class SwiftSpinner: UIView {
             self.currentInnerRotation += CGFloat(M_PI_4)
             self.innerCircleView.transform = CGAffineTransformMakeRotation(self.currentInnerRotation)
             }, completion: {_ in
-                self.delay(seconds: 0.5, {
+                self.delay(seconds: 0.5, completion: {
                     if self.animating {
                         self.spinInner()
                     }
                 })
         })
+    }
+    
+    private func updateFrame() {
+        let window = UIApplication.sharedApplication().windows.first as! UIWindow
+        SwiftSpinner.sharedInstance.frame = window.frame
     }
     
     // MARK: - Util methods
@@ -274,5 +302,10 @@ public class SwiftSpinner: UIView {
             completion()
         }
     }
-
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        updateFrame()
+    }
+    
 }

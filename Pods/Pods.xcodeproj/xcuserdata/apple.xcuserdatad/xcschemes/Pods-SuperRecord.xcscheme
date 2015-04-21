@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A985338C7AC1D44964D12205"
+               BlueprintIdentifier = "0479E062738FFF1BA03CB467"
                BuildableName = "SuperRecord.framework"
                BlueprintName = "Pods-SuperRecord"
                ReferencedContainer = "container:Pods.xcodeproj">

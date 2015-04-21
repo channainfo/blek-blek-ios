@@ -20,18 +20,5 @@ class PXPhotoTableViewCell: UITableViewCell {
   @IBOutlet weak var focalLens: UILabel!
   @IBOutlet weak var shutterSpeed: UILabel!
   @IBOutlet weak var imageLoading: UIImageView!
-
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
-  }
-
-  override func setSelected(selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    // Configure the view for the selected state
-  }
-  func removeLoading() {
-   
-  }
-
+  @IBOutlet weak var photoActivityIndicator: UIActivityIndicatorView!
 }

@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import ImageLoader
 
 class PXPhotoListTableViewController: UITableViewController {
   var pxPhotoManager: PXPhotoManager = PXPhotoManager()
   var photos: [PXPhoto] = []
+  
 
     func loadPxPhotos() {
       println("load Px Photos")
@@ -67,7 +67,7 @@ class PXPhotoListTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell:PXPhotoTableViewCell = tableView.dequeueReusableCellWithIdentifier("pxPhotoCell", forIndexPath: indexPath) as PXPhotoTableViewCell
+      let cell:PXPhotoTableViewCell = tableView.dequeueReusableCellWithIdentifier("pxPhotoCell", forIndexPath: indexPath) as! PXPhotoTableViewCell
 
         let photo = self.photos[indexPath.row]
 
@@ -77,12 +77,14 @@ class PXPhotoListTableViewController: UITableViewController {
         cell.iso.text = photo.iso
         cell.focalLens.text = photo.focalLength
         cell.shutterSpeed.text = photo.shutterSpeed
+        cell.photoActivityIndicator.startAnimating()
 
         let urlObj = NSURL(string: photo.imageurl!)
 
         ImageLoader.sharedLoader.imageForUrl(photo.imageurl!, completionHandler:{(image: UIImage?, url: String) in
           cell.posterImageView.image = image
-          cell.imageLoading.hidden = true
+          cell.photoActivityIndicator.stopAnimating()
+          //cell.photoActivityIndicator.hidden = true
         })
         return cell
     }

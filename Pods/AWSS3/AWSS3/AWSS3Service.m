@@ -248,27 +248,33 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
              targetPrefix:(NSString *)targetPrefix
             operationName:(NSString *)operationName
               outputClass:(Class)outputClass {
-    if (!request) {
-        request = [AWSRequest new];
+    
+    @autoreleasepool {
+        if (!request) {
+            request = [AWSRequest new];
+        }
+        
+        AWSNetworkingRequest *networkingRequest = request.internalRequest;
+        if (request) {
+            networkingRequest.parameters = [[MTLJSONAdapter JSONDictionaryFromModel:request] aws_removeNullValues];
+        } else {
+            networkingRequest.parameters = @{};
+        }
+        networkingRequest.shouldWriteDirectly = [[request valueForKey:@"shouldWriteDirectly"] boolValue];
+        networkingRequest.downloadingFileURL = request.downloadingFileURL;
+        networkingRequest.HTTPMethod = HTTPMethod;
+        networkingRequest.requestSerializer = [[AWSXMLRequestSerializer alloc] initWithResource:AWSS3APIVersion
+                                                                                     actionName:operationName
+                                                                                 classForBundle:[self class]];
+        networkingRequest.responseSerializer = [[AWSS3ResponseSerializer alloc] initWithResource:AWSS3APIVersion
+                                                                                      actionName:operationName
+                                                                                     outputClass:outputClass
+                                                                                  classForBundle:[self class]];
+        return [[self.networking sendRequest:networkingRequest] continueWithBlock:^id(BFTask *task) {
+            request.internalRequest = nil;
+            return task;
+        }];
     }
-
-    AWSNetworkingRequest *networkingRequest = request.internalRequest;
-    if (request) {
-        networkingRequest.parameters = [[MTLJSONAdapter JSONDictionaryFromModel:request] aws_removeNullValues];
-    } else {
-        networkingRequest.parameters = @{};
-    }
-    networkingRequest.shouldWriteDirectly = [[request valueForKey:@"shouldWriteDirectly"] boolValue];
-    networkingRequest.downloadingFileURL = request.downloadingFileURL;
-    networkingRequest.HTTPMethod = HTTPMethod;
-    networkingRequest.requestSerializer = [[AWSXMLRequestSerializer alloc] initWithResource:AWSS3APIVersion
-                                                                                 actionName:operationName
-                                                                             classForBundle:[self class]];
-    networkingRequest.responseSerializer = [[AWSS3ResponseSerializer alloc] initWithResource:AWSS3APIVersion
-                                                                                  actionName:operationName
-                                                                                 outputClass:outputClass
-                                                                              classForBundle:[self class]];
-    return [self.networking sendRequest:networkingRequest];
 }
 
 #pragma mark - Service method

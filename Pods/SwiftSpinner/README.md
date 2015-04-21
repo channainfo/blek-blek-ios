@@ -6,6 +6,11 @@
 
 SwiftSpinner is an extra beautiful activity indicator with plain and bold style fitting iOS 8 design very well. It uses dynamic blur and translucency to overlay the current screen contents and display an activity indicator with text (or the so called “spinner”).
 
+- - -
+
+**Note:** SwiftSpinner is now **Swift 1.2** compatible, which means it runs only on iOS 8.2 or higher.
+- - -
+
 I developed it for my Swift app called **Doodle Doodle** and wanted to share it with everyone. Check the app here: http://doodledoodle.io
 
 This is how the activity looks like (from the demo app):
@@ -14,7 +19,7 @@ This is how the activity looks like (from the demo app):
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first. That’ll run the demo program which shows you how the spinner looks like and what it can do. 
+To run the example project, clone the repo, and run `pod install` from the DemoApp directory first. That’ll run the demo program which shows you how the spinner looks like and what it can do. 
 
 #### Code samples
 
@@ -65,7 +70,7 @@ In case you don’t want to use CocoaPods - just copy the file **SwiftSpinner/Sw
 
 ## Author
 
-**Marin Todorov**, http://www.touch-code-magazine.com/about
+**Marin Todorov**, [http://www.touch-code-magazine.com/about](http://www.touch-code-magazine.com/about)
 
 ## License
 
