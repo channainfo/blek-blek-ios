@@ -9,6 +9,7 @@
 import UIKit
 
 class PXPhotoListTableViewController: UITableViewController {
+  
   var pxPhotoManager: PXPhotoManager = PXPhotoManager()
   var photos: [PXPhoto] = []
   
@@ -78,11 +79,13 @@ class PXPhotoListTableViewController: UITableViewController {
         cell.focalLens.text = photo.focalLength
         cell.shutterSpeed.text = photo.shutterSpeed
         cell.photoActivityIndicator.startAnimating()
+      
 
         let urlObj = NSURL(string: photo.imageurl!)
 
         ImageLoader.sharedLoader.imageForUrl(photo.imageurl!, completionHandler:{(image: UIImage?, url: String) in
           cell.posterImageView.image = image
+        
           cell.photoActivityIndicator.stopAnimating()
           //cell.photoActivityIndicator.hidden = true
         })

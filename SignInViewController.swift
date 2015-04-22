@@ -17,10 +17,14 @@ class SignInViewController: BaseViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    AppAccess.auth({ () -> () in
+      println("Connected successfully")
+    }, onError: { () -> () in
+      println("Failed to connect, try again")
+    })
   }
 
   @IBAction func credentialDoneEditing(sender: AnyObject) {
-    println("Done")
     self.loginTextField.resignFirstResponder()
     self.passwordTextField.resignFirstResponder()
   }
@@ -30,29 +34,22 @@ class SignInViewController: BaseViewController {
     var login = self.loginTextField.text
     var password = self.passwordTextField.text
     var session = Session(login: login, password: password)
-    session.auth({ (jsonData) -> Void in
-       println("Signin success with: \(jsonData)")
-       let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main_view_controller") as! UITabBarController
-       let DEFAULT_VIEW_CONTROLLER_INDEX = 2
-       mainViewController.selectedIndex = DEFAULT_VIEW_CONTROLLER_INDEX
-       self.presentViewController(mainViewController, animated: true, completion: nil)
-       // self.redirectTo("main_view_controller")
+    
+    User.auth(login, password: password, onSuccess: { (jsonData) -> Void in
+      println("Signin success with: \(jsonData)")
+      
+      let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("main_view_controller") as! UITabBarController
+      let DEFAULT_VIEW_CONTROLLER_INDEX = 2
+      mainViewController.selectedIndex = DEFAULT_VIEW_CONTROLLER_INDEX
+      self.presentViewController(mainViewController, animated: true, completion: nil)
 
-    }, onError: { (statusCode) -> Void in
+
+    }) { (statusCode) -> Void in
       println("Failed with code: \(statusCode)")
-    })
+    }
+    
 
   }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

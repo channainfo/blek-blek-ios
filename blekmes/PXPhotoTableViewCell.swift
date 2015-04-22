@@ -21,4 +21,6 @@ class PXPhotoTableViewCell: UITableViewCell {
   @IBOutlet weak var shutterSpeed: UILabel!
   @IBOutlet weak var imageLoading: UIImageView!
   @IBOutlet weak var photoActivityIndicator: UIActivityIndicatorView!
+  
+  
 }

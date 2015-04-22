@@ -10,14 +10,7 @@ import Foundation
 
 class PersistentStorage {
   var dataSource: NSUserDefaults!
-  //Swift > 1.2
-  //static let sharedInstance = PersistentStorage()
-  class var sharedInstance:PersistentStorage {
-    struct Singleton {
-      static let instance = PersistentStorage()
-    }
-    return Singleton.instance
-  }
+  static let sharedInstance = PersistentStorage()
 
   init() {
     self.dataSource = NSUserDefaults.standardUserDefaults()
