@@ -16,7 +16,6 @@
 		183119B21AC9490200AC1B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B11AC9490200AC1B14 /* AppDelegate.swift */; };
 		183119B41AC9490200AC1B14 /* PXPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B31AC9490200AC1B14 /* PXPhotoViewController.swift */; };
 		183119B61AC9490200AC1B14 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119B51AC9490200AC1B14 /* SecondViewController.swift */; };
-		183119B91AC9490200AC1B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183119B71AC9490200AC1B14 /* Main.storyboard */; };
 		183119BB1AC9490200AC1B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183119BA1AC9490200AC1B14 /* Images.xcassets */; };
 		183119BE1AC9490200AC1B14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183119BC1AC9490200AC1B14 /* LaunchScreen.xib */; };
 		183119CA1AC9490200AC1B14 /* blekmesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183119C91AC9490200AC1B14 /* blekmesTests.swift */; };
@@ -30,6 +29,8 @@
 		1875D0CF1AE6A7E2004BAE01 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875D0CE1AE6A7E1004BAE01 /* SignUpViewController.swift */; };
 		1875D0D11AE6A836004BAE01 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875D0D01AE6A836004BAE01 /* User.swift */; };
 		1875D0D31AE72C21004BAE01 /* AppAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875D0D21AE72C21004BAE01 /* AppAccess.swift */; };
+		1875D0D51AE7D90F004BAE01 /* GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875D0D41AE7D90F004BAE01 /* GestureRecognizer.swift */; };
+		1875D0D81AE7EECB004BAE01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1875D0D61AE7EECB004BAE01 /* Main.storyboard */; };
 		2BC2F885258D264489CAE737 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00F4779D7808639C367F158 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -55,7 +56,6 @@
 		183119B11AC9490200AC1B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183119B31AC9490200AC1B14 /* PXPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXPhotoViewController.swift; sourceTree = "<group>"; };
 		183119B51AC9490200AC1B14 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		183119B81AC9490200AC1B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183119BA1AC9490200AC1B14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		183119BD1AC9490200AC1B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		183119C31AC9490200AC1B14 /* blekmesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blekmesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +72,8 @@
 		1875D0CE1AE6A7E1004BAE01 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1875D0D01AE6A836004BAE01 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1875D0D21AE72C21004BAE01 /* AppAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAccess.swift; sourceTree = "<group>"; };
+		1875D0D41AE7D90F004BAE01 /* GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecognizer.swift; sourceTree = "<group>"; };
+		1875D0D71AE7EECB004BAE01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97268E3E74DB3537395D1A6A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A00F4779D7808639C367F158 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34023ED57864BA202C41DD5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				187354BD1AD589A7008416B0 /* PersistentStorage.swift */,
 				1875D0D01AE6A836004BAE01 /* User.swift */,
 				1875D0D21AE72C21004BAE01 /* AppAccess.swift */,
+				1875D0D41AE7D90F004BAE01 /* GestureRecognizer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,8 +226,8 @@
 		187354B61AD273A6008416B0 /* InterfaceBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				1875D0D61AE7EECB004BAE01 /* Main.storyboard */,
 				183119BC1AC9490200AC1B14 /* LaunchScreen.xib */,
-				183119B71AC9490200AC1B14 /* Main.storyboard */,
 			);
 			name = InterfaceBuilder;
 			sourceTree = "<group>";
@@ -317,7 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183119B91AC9490200AC1B14 /* Main.storyboard in Resources */,
+				1875D0D81AE7EECB004BAE01 /* Main.storyboard in Resources */,
 				183119BE1AC9490200AC1B14 /* LaunchScreen.xib in Resources */,
 				183119BB1AC9490200AC1B14 /* Images.xcassets in Resources */,
 			);
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183119B61AC9490200AC1B14 /* SecondViewController.swift in Sources */,
+				1875D0D51AE7D90F004BAE01 /* GestureRecognizer.swift in Sources */,
 				1817A9A91ACC474D00943DB7 /* Secret.swift in Sources */,
 				1817A9AD1ACC549400943DB7 /* PXPhotoTableViewCell.swift in Sources */,
 				183119B21AC9490200AC1B14 /* AppDelegate.swift in Sources */,
@@ -426,20 +430,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		183119B71AC9490200AC1B14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				183119B81AC9490200AC1B14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		183119BC1AC9490200AC1B14 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				183119BD1AC9490200AC1B14 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1875D0D61AE7EECB004BAE01 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1875D0D71AE7EECB004BAE01 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

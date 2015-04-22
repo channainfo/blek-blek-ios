@@ -20,9 +20,10 @@ class BaseViewController: UIViewController {
     }
 
     private func tabToClose() {
-      let tapGestureRecognizer = UITapGestureRecognizer()
-      tapGestureRecognizer.addTarget(self, action: "closeKeyboard" )
-      self.view.addGestureRecognizer(tapGestureRecognizer)
+//      let tapGestureRecognizer = UITapGestureRecognizer()
+//      tapGestureRecognizer.addTarget(self, action: "closeKeyboard" )
+//      self.view.addGestureRecognizer(tapGestureRecognizer)
+      GestureRecognizer.addTapRecognizer(target: self, action: "closeKeyboard", view: self.view)
     }
 
     func closeKeyboard() {

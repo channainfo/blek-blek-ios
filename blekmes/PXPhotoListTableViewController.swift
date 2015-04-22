@@ -73,23 +73,32 @@ class PXPhotoListTableViewController: UITableViewController {
         let photo = self.photos[indexPath.row]
 
         cell.posterImageView.image = nil
+        cell.posterImageView.userInteractionEnabled = true
+        cell.posterImageView.tag = indexPath.row
+        
+      
+        GestureRecognizer.addTapRecognizer(target: self, action: "showMe:", view: cell.posterImageView)
+      
         cell.camera.text = photo.camera
         cell.lens.text = photo.lens
         cell.iso.text = photo.iso
         cell.focalLens.text = photo.focalLength
         cell.shutterSpeed.text = photo.shutterSpeed
         cell.photoActivityIndicator.startAnimating()
-      
 
         let urlObj = NSURL(string: photo.imageurl!)
 
         ImageLoader.sharedLoader.imageForUrl(photo.imageurl!, completionHandler:{(image: UIImage?, url: String) in
           cell.posterImageView.image = image
-        
           cell.photoActivityIndicator.stopAnimating()
           //cell.photoActivityIndicator.hidden = true
         })
+
         return cell
+    }
+  
+    func showMe(sender: UITapGestureRecognizer) {
+      println("Click: \(sender.view!.tag)")
     }
 
 
