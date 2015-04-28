@@ -11,13 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 class Session {
-  var login: String = ""
-  var password: String = ""
-
-  init(login:String, password: String) {
-    self.login = login
-    self.password = password
-  }
 
   class func signIn(json: AnyObject?){
     PersistentStorage.sharedInstance.set(AppConfig.APP_SESSION_ID, value: json )

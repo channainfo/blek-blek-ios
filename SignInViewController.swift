@@ -33,7 +33,6 @@ class SignInViewController: BaseViewController {
   @IBAction func signIn(sender: UIButton) {
     var login = self.loginTextField.text
     var password = self.passwordTextField.text
-    var session = Session(login: login, password: password)
     
     User.auth(login, password: password, onSuccess: { (jsonData) -> Void in
       println("Signin success with: \(jsonData)")

@@ -33,6 +33,7 @@ class PXDetailPhotoViewController: UIViewController, UIScrollViewDelegate {
     }
   }
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var scrollImage: UIScrollView! {
     didSet{
@@ -66,6 +67,8 @@ class PXDetailPhotoViewController: UIViewController, UIScrollViewDelegate {
   func updateUI(){
     println("\n UIPhoto: \(pxPhoto.name)")
     self.title = self.pxPhoto.name
+    self.activityIndicator.hidesWhenStopped = true
+    self.activityIndicator.startAnimating()
     
   }
   
@@ -78,6 +81,7 @@ class PXDetailPhotoViewController: UIViewController, UIScrollViewDelegate {
         if let imageData = NSData(contentsOfURL: NSURL(string: url)!) {
           dispatch_async( dispatch_get_main_queue())  {
             self.image = UIImage(data: imageData)
+            self.activityIndicator.stopAnimating()
           }
           
         }

@@ -233,19 +233,29 @@
                                     </mask>
                                 </variation>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VUz-GK-8Z0">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HAR-Lq-7Co" firstAttribute="top" secondItem="VUz-GK-8Z0" secondAttribute="bottom" constant="290" id="Nkj-SY-aD7"/>
                             <constraint firstItem="wZI-sl-ISk" firstAttribute="bottom" secondItem="HAR-Lq-7Co" secondAttribute="top" id="SYS-Cm-TIN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VUz-GK-8Z0" secondAttribute="trailing" constant="274" id="TV2-UT-QyF"/>
                             <constraint firstItem="wZI-sl-ISk" firstAttribute="leading" secondItem="vIg-X3-UFX" secondAttribute="leading" id="Z8N-yG-ycu"/>
                             <constraint firstItem="wZI-sl-ISk" firstAttribute="top" secondItem="vIg-X3-UFX" secondAttribute="topMargin" constant="28" id="h58-fd-FPu"/>
+                            <constraint firstItem="VUz-GK-8Z0" firstAttribute="leading" secondItem="vIg-X3-UFX" secondAttribute="leadingMargin" constant="274" id="q01-Wq-G50"/>
                             <constraint firstAttribute="trailing" secondItem="wZI-sl-ISk" secondAttribute="trailing" id="tI5-6B-IAO"/>
+                            <constraint firstAttribute="centerY" secondItem="VUz-GK-8Z0" secondAttribute="centerY" id="vmJ-rR-pIy"/>
+                            <constraint firstItem="VUz-GK-8Z0" firstAttribute="top" secondItem="0Ht-8X-rY3" secondAttribute="bottom" constant="226" id="wTk-Et-lVY"/>
+                            <constraint firstAttribute="centerX" secondItem="VUz-GK-8Z0" secondAttribute="centerX" id="xAR-Qu-nUZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="Yt1-UI-DIh">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="eHo-Qh-xb8"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="VUz-GK-8Z0" id="5ce-N7-HWB"/>
                         <outlet property="imageView" destination="jgU-Jd-1cb" id="VdO-Ia-DTh"/>
                         <outlet property="scrollImage" destination="wZI-sl-ISk" id="9Zj-rO-Lz2"/>
                     </connections>
