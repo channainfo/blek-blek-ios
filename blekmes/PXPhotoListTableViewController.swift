@@ -15,7 +15,6 @@ class PXPhotoListTableViewController: UITableViewController {
   
 
     func loadPxPhotos() {
-      println("load Px Photos")
       var params: [String:String] = ["only":"Landscapes","image_size":"4"]
       self.pxPhotoManager.getPhotos(params, completion: processPhotos)
     }
@@ -24,20 +23,22 @@ class PXPhotoListTableViewController: UITableViewController {
       self.photos.removeAll(keepCapacity: false)
       for photo in photos {
         self.photos.append(photo)
-        println("photo name: \(photo.camera!)")
       }
 
-      println("total photo count: \(self.photos.count)")
-      self.tableView.reloadData()
+      dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        self.tableView.reloadData()
+      })
     }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadPxPhotos()
-
-
-
+      
+        let qos = Int(QOS_CLASS_USER_INITIATED.value)
+        let queue = dispatch_get_global_queue(qos, 0)
+        dispatch_async(queue, { () -> Void in
+          self.loadPxPhotos()
+        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,15 +55,10 @@ class PXPhotoListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        println("total photo count: \(self.photos.count)")
         return self.photos.count
     }
 
@@ -77,7 +73,7 @@ class PXPhotoListTableViewController: UITableViewController {
         cell.posterImageView.tag = indexPath.row
         
       
-        GestureRecognizer.addTapRecognizer(target: self, action: "showMe:", view: cell.posterImageView)
+        GestureRecognizer.addTapRecognizer(target: self, action: "showPhotoDetailPage:", view: cell.posterImageView)
       
         cell.camera.text = photo.camera
         cell.lens.text = photo.lens
@@ -91,16 +87,35 @@ class PXPhotoListTableViewController: UITableViewController {
         ImageLoader.sharedLoader.imageForUrl(photo.imageurl!, completionHandler:{(image: UIImage?, url: String) in
           cell.posterImageView.image = image
           cell.photoActivityIndicator.stopAnimating()
-          //cell.photoActivityIndicator.hidden = true
         })
 
         return cell
     }
   
-    func showMe(sender: UITapGestureRecognizer) {
-      println("Click: \(sender.view!.tag)")
+    func showPhotoDetailPage(sender: UITapGestureRecognizer) {
+      let index = sender.view!.tag
+      let photo = self.photos[index]
+      let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detail_photo") as? PXDetailPhotoViewController
+      
+      detailViewController?.pxPhoto = photo
+      
+      
+      let navVC = UINavigationController(rootViewController: detailViewController!)
+      
+      self.navigationController?.presentViewController(
+        navVC, animated: true, completion: nil)
+      
+     
+//      self.presentViewController(detailViewController!, animated: true, completion: nil)
+  
     }
 
+  @IBOutlet weak var refresher: UIRefreshControl!
+  
+  @IBAction func refreshPhoto(sender: AnyObject) {
+    println("I am refreshing")
+  }
+  
 
     /*
     // Override to support conditional editing of the table view.

@@ -13,9 +13,9 @@ import SwiftyJSON
 class PXPhotoManager: NSObject {
 
   func getPhotos(var params: [String: String], completion: (photos: [PXPhoto], error: NSError?) ->()) {
-    params["consumer_key"] = Secret.PX_API_KEY
+    params["consumer_key"] = AppConfig.PX_API_KEY
 
-    Alamofire.request(.GET, Secret.PX_API_URL, parameters: params, encoding: ParameterEncoding.URL)
+    Alamofire.request(.GET, AppConfig.PX_API_URL, parameters: params, encoding: ParameterEncoding.URL)
              .responseJSON { (request, response, data, error) -> Void in
                 let jsonData = JSON(data!)
                 var photos = [PXPhoto]()

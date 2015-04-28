@@ -12,12 +12,12 @@ import SwiftyJSON
 
 class AppAccess {
   class func auth(onSuccess: ()-> (), onError: ()->() )-> Void {
-    let parameters = [ "client_id": Secret.API_CLIENT_ID,
-                       "client_secret": Secret.API_CLIENT_SECRET,
+    let parameters = [ "client_id": AppConfig.API_CLIENT_ID,
+                       "client_secret": AppConfig.API_CLIENT_SECRET,
                        "grant_type": "client_credentials"
     ]
     
-    Alamofire.request(.POST, "\(Secret.API_HOST)/oauth/token", parameters: parameters, encoding: ParameterEncoding.URL)
+    Alamofire.request(.POST, "\(AppConfig.API_HOST)/oauth/token", parameters: parameters, encoding: ParameterEncoding.URL)
       .responseJSON() { (request, response, json, error) in
 
         if response?.statusCode != 200 {
@@ -25,8 +25,8 @@ class AppAccess {
 
         }
         else {
-          PersistentStorage.sharedInstance.set(Secret.APP_AUTH_TOKEN, value: json!["access_token"])
-          println("token is:\(PersistentStorage.sharedInstance.get(Secret.APP_AUTH_TOKEN))")
+          PersistentStorage.sharedInstance.set(AppConfig.APP_AUTH_TOKEN, value: json!["access_token"])
+          println("token is:\(PersistentStorage.sharedInstance.get(AppConfig.APP_AUTH_TOKEN))")
 
         }
     }
@@ -34,6 +34,6 @@ class AppAccess {
   }
   
   class var appAccessToken: String? {
-    return PersistentStorage.sharedInstance.get(Secret.APP_AUTH_TOKEN) as? String
+    return PersistentStorage.sharedInstance.get(AppConfig.APP_AUTH_TOKEN) as? String
   }
 }

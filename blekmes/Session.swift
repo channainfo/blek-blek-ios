@@ -20,18 +20,18 @@ class Session {
   }
 
   class func signIn(json: AnyObject?){
-    PersistentStorage.sharedInstance.set(Secret.APP_SESSION_ID, value: json )
+    PersistentStorage.sharedInstance.set(AppConfig.APP_SESSION_ID, value: json )
     println("Signin session with \(JSON(json!))")
   }
 
   class func signOut() {
-    var data = JSON(PersistentStorage.sharedInstance.get(Secret.APP_SESSION_ID)!)
+    var data = JSON(PersistentStorage.sharedInstance.get(AppConfig.APP_SESSION_ID)!)
     println("destroying session: \(data)")
-    PersistentStorage.sharedInstance.set(Secret.APP_SESSION_ID, value: nil)
+    PersistentStorage.sharedInstance.set(AppConfig.APP_SESSION_ID, value: nil)
   }
 
   class func authenticated() -> Bool {
-    var session: AnyObject? = PersistentStorage.sharedInstance.get(Secret.APP_SESSION_ID)
+    var session: AnyObject? = PersistentStorage.sharedInstance.get(AppConfig.APP_SESSION_ID)
     return (session != nil) ? true : false
   }
 

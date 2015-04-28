@@ -15,7 +15,7 @@ class GestureRecognizer {
     var tapGestureRecognizer = UITapGestureRecognizer()
     
     tapGestureRecognizer.addTarget(target, action: action)
-    tapGestureRecognizer.delegate = target as? UIGestureRecognizerDelegate
+//    tapGestureRecognizer.delegate = target as? UIGestureRecognizerDelegate
     view.addGestureRecognizer(tapGestureRecognizer)
   }
 }

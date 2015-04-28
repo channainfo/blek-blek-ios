@@ -34,7 +34,7 @@ class User {
       "access_token": AppAccess.appAccessToken!
     ]
     
-    Alamofire.request(.POST, "\(Secret.API_URL)/registrations", parameters: parameters, encoding: ParameterEncoding.URL)
+    Alamofire.request(.POST, "\(AppConfig.API_URL)/registrations", parameters: parameters, encoding: ParameterEncoding.URL)
       .responseJSON() { (request, response, json, error) in
         
         if response?.statusCode != 201 {
@@ -50,10 +50,10 @@ class User {
   
   class func auth(login:String, password:String, onSuccess: (data: AnyObject)->Void, onError: (statusCode: Int)->Void )-> Void {
     let parameters = [ "username": login, "password": password,
-      "grant_type": "password", "client_id": Secret.API_CLIENT_ID,
-      "client_secret": Secret.API_CLIENT_SECRET  ]
+      "grant_type": "password", "client_id": AppConfig.API_CLIENT_ID,
+      "client_secret": AppConfig.API_CLIENT_SECRET  ]
     
-    Alamofire.request(.POST, "\(Secret.API_HOST)/oauth/token", parameters: parameters, encoding: ParameterEncoding.URL)
+    Alamofire.request(.POST, "\(AppConfig.API_HOST)/oauth/token", parameters: parameters, encoding: ParameterEncoding.URL)
       .responseJSON { (request, response, json, error) -> Void in
         
         if response?.statusCode != 200 {

@@ -10,8 +10,8 @@ import Foundation
 
 class AWSConnection {
   init(){
-    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: Secret.AWS_COGNITO_REGION_TYPE, identityPoolId: Secret.AWS_COGNITO_IDENTITY_POOL_ID)
-    let configuration  = AWSServiceConfiguration(region: Secret.AWS_DEFAULT_SERVICE_REGION_TYPE, credentialsProvider: credentialsProvider)
+    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: AppConfig.AWS_COGNITO_REGION_TYPE, identityPoolId: AppConfig.AWS_COGNITO_IDENTITY_POOL_ID)
+    let configuration  = AWSServiceConfiguration(region: AppConfig.AWS_DEFAULT_SERVICE_REGION_TYPE, credentialsProvider: credentialsProvider)
     AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
   }
 }
